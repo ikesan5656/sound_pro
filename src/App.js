@@ -1,31 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import MidiConnect from './Components/MidiConnect';
 import ToneSimplePlay from './Components/ToneSimplePlay';
 import Test from './Components/Test';
 import StepSequencer from './Components/StepSequencer/StepSequencer';
+import TopHeader from './Components/Generic/TopHeader';
+import ReduxTestView from './Pages/ReduxTestView';
 
 function App() {
   return (
     <div className="App">
-			<StepSequencer/>
+			<TopHeader/>
+
+			<BrowserRouter>
+				<Routes>
+					<Route exact path="/" element={<StepSequencer/>}/>
+					<Route path="/redux_test" element={<ReduxTestView/>}/>
+				</Routes>
+			</BrowserRouter>
+
+			
+			
 
 			{/*<MidiConnect/>
 			<ToneSimplePlay/>*/}
-      {/*<header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-	</header>*/}
+
     </div>
   );
 }

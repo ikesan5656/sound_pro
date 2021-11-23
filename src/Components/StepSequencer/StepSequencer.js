@@ -5,11 +5,59 @@ function StepSequencer() {
 
 	const audio_context = useRef();
 
+
+	//オーディオファイル読み込み(非同期)
+	const AudioFileLoad = (file_name) => {
+
+		const p = new Promise((resolve, reject) => {
+
+			let audio_data;
+
+			//サウンドファイルディレクトリ
+			const sound_dir = `${process.env.PUBLIC_URL}/Sounds/`;
+			//console.log(sound_dir + file_name);
+			//const sound_dir = `${"../../Data/Sounds"}/Sounds/`;
+			const request = new XMLHttpRequest();
+			request.open('GET', sound_dir + file_name, true);
+			request.responseType = 'arraybuffer';
+
+			request.onload = () => {
+				console.log("test");
+				//レスポンス受け取る
+				audio_data = request.response;
+				//console.log(audio_data);
+				resolve(audio_data);
+				
+			};
+
+			request.send();
+
+			
+
+		});
+		
+		return p;
+
+	};
+
 	//初期化
 	useEffect(() => {
 		audio_context.current = new AudioContext();
-		//AudioFileLoad("step-sequencer_dtmf.mp3");
-		FileLoad("step-sequencer_dtmf.mp3");
+		console.log("1");
+
+		const data = AudioFileLoad("step-sequencer_dtmf.mp3");
+		data.then((decode) => {
+			console.log(decode);
+		});
+
+	
+
+
+		
+
+
+		console.log("2");
+		//FileLoad("step-sequencer_dtmf.mp3");
 		//SetUp();
 		//SetUp();
 	},[]);
@@ -28,55 +76,7 @@ function StepSequencer() {
 
 	}
 
-	//オーディオファイル読み込み(非同期)
-	const AudioFileLoad = (file_name) => {
 
-		
-		//サウンドファイルディレクトリ
-		const sound_dir = `${process.env.PUBLIC_URL}/Sounds/`;
-		//const sound_dir = `${"../../Data/Sounds"}/Sounds/`;
-
-		//フェッチの結果を受け取る
-		//const response = await fetch(sound_dir + file_name);
-		//バッファ取得
-		//const array_buffer = await response.arrayBuffer();
-		//const audio_buffer = await audio_context.current.decodeAudioData(array_buffer, console.log("成功"));
-		//console.log(audio_buffer);
-
-
-		fetch(sound_dir + file_name).then(response => {
-			if (!response.ok) {
-				throw new Error('Network response was not ok');
-			}
-			return response.arrayBuffer();
-		}).then(buffer => {
-			console.log(buffer);
-			audio_context.current.decodeAudioData(buffer).then((decode_data) => {
-				return decode_data;
-			}).then(result => {
-				console.log(result);
-			});
-			/*audio_context.current.decodeAudioData(buffer, (decode_data) => {
-				const data = decode_data;
-				console.log(data);
-			});*/
-			
-			//const array_buffer = myBlob.arrayBuffer();
-			//esolve(array_buffer);
-			//console.log(array_buffer);
-			//const audio_buffer = audio_context.current.decodeAudioData(array_buffer, console.log("成功"));
-			//console.log(audio_buffer);
-
-		}).catch(error => {
-			console.error('There has been a problem with your fetch operation:', error);
-		});
-	
-		//オーディオデータへデコード
-		//const audio_buffer = Promise<audio_buffer> audio_context.current.decodeAudioData(array_buffer);
-
-		//console.log(audio_buffer);
-		//return audio_buffer;
-	};
 
 
 
