@@ -8,7 +8,7 @@ function TopHeader() {
 				<ul>
 					<li><a href="/">ビートメーカー</a></li>
 					<li><a href="/redux_test">Redux</a></li>
-					<li><a href="/">test3</a></li>
+					<li><a href="/aws_test">AWS</a></li>
 					<li><a href="/">test4</a></li>
 				</ul>
 			</nav>

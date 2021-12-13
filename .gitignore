@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# 特定の拡張子を無視する
+*.exe
+*.env

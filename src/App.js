@@ -6,6 +6,7 @@ import Test from './Components/Test';
 import StepSequencer from './Components/StepSequencer/StepSequencer';
 import TopHeader from './Components/Generic/TopHeader';
 import ReduxTestView from './Pages/ReduxTestView';
+import ViewAWS from './Pages/ViewAWS';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<StepSequencer/>}/>
 					<Route path="/redux_test" element={<ReduxTestView/>}/>
+					<Route path="/aws_test" element={<ViewAWS/>}/>
 				</Routes>
 			</BrowserRouter>
 
