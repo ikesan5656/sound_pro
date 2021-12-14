@@ -35,11 +35,15 @@ const AudioManager = () => {
 	const Stop = (source_data) => {
 		source_data.stop();
 	};
+
+	const GetAudioCtx = () => {
+		return ctx.current;
+	};
 	/*-----------------------------------------------------------------*/
 
 
 	//外部で使用するメソッドや変数を返す
-	return {MakeSource, ctx};
+	return {MakeSource, GetAudioCtx, Play};
 
 };
 

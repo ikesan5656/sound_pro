@@ -1,6 +1,6 @@
 import AWS from 'aws-sdk';
 
-function S3ObjectGetV2() {
+function S3ListObjectGet() {
 
 	//const aws = require('aws-sdk');
 	//IAMユーザーを使った認証方法(EC2を使用すればアクセスキー等は不要)
@@ -34,6 +34,8 @@ function S3ObjectGetV2() {
 			res.Contents.map(v => v.Key).forEach(v => {
 				keyList.push(v);
 			});
+
+			
 			
 			// listObjectsV2 が一度に取得できるのは1000件まで
 			// リストが切り詰められている場合は IsTruncated がtrueになる
@@ -44,6 +46,8 @@ function S3ObjectGetV2() {
 			// 次の読み込み開始位置を保存
 			continuationToken = res.NextContinuationToken;
 		}
+
+		console.log(keyList);
 		
 		// 全てのオブジェクトを処理
 		/*for (let key of keyList) {
@@ -67,4 +71,4 @@ function S3ObjectGetV2() {
 
 }
 
-export default S3ObjectGetV2;
+export default S3ListObjectGet;

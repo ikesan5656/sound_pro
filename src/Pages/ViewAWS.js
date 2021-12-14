@@ -1,17 +1,15 @@
 /*AWSテスト用画面*/
 
-import ConnectS3 from "../Components/AWS/ConnectS3";
-import TestAws from "../Components/AWS/TestAws";
-import S3ObjectGet from "../Components/AWS/S3ObjectGet";
-import S3ObjectGetV2 from "../Components/AWS/S3ObjectGetV2";
+import S3ListObjectGet from "../Components/AWS/S3ListObjectGet";
+import S3GetObject from "../Components/AWS/S3GetObject";
 
 function ViewAWS() {
 	return(
 		<div>
 			<p>AWSテスト</p>
-			<S3ObjectGetV2/>
-			{/*<ConnectS3/>*/}
-			{/*<TestAws/>*/}
+			{/*<S3ListObjectGet/>*/}
+			<S3GetObject/>
+
 		</div>
 	);
 }
