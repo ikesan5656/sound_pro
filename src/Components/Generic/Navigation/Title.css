@@ -1,0 +1,13 @@
+.app_title{
+	width: 20%;
+	height: 50px;
+	padding-left: 25px;
+	display: flex;
+	/*justify-content: center;*/ /*左右中央揃え*/
+	align-items: center;     /*上下中央揃え*/
+}
+
+/*タイトルの文字*/
+.app_title a p {
+	font-size: 24px;
+}

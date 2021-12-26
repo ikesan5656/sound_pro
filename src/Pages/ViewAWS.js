@@ -1,14 +1,14 @@
 /*AWSテスト用画面*/
-
-import S3ListObjectGet from "../Components/AWS/S3ListObjectGet";
-import S3GetObject from "../Components/AWS/S3GetObject";
+import S3ListObjectGet from "../Components/AWS/GetS3ListObject";
+import PlayTest from "../Components/Audio/PlayTest";
 
 function ViewAWS() {
 	return(
 		<div>
+			
 			<p>AWSテスト</p>
-			{/*<S3ListObjectGet/>*/}
-			<S3GetObject/>
+			<PlayTest/>
+	
 
 		</div>
 	);

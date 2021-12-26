@@ -43,7 +43,7 @@ const AudioManager = () => {
 
 
 	//外部で使用するメソッドや変数を返す
-	return {MakeSource, GetAudioCtx, Play};
+	return {MakeSource, GetAudioCtx, Play, Stop};
 
 };
 
