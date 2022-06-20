@@ -2,3 +2,20 @@
 	width: 500px;
 	margin: 0 auto;
 }
+
+/*バケットインフォテーブル*/
+.bucket_info_table{
+	border-collapse: collapse;	/*セルの線を重ねる*/
+	width: 100%;
+}
+
+.bucket_info_head tr th{
+	/*width: 100px;*/
+	font-weight: bold;
+	border: solid 1px; 
+}
+
+.bucket_info_body tr td{
+	border: solid 1px; 
+}
+

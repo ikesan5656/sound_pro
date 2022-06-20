@@ -84,32 +84,29 @@ function S3BucketInfo() {
 
 		return(
 			<div className="s3_object_list">
-				<button onClick={Test}>test</button>
-				<table>
+				{/*<button onClick={Test}>test</button>*/}
+				<table className="bucket_info_table">
 					{/*ヘッダー*/}
-					<thead>
+					<thead className="bucket_info_head">
 						<tr>
 							<th width="100px">No</th>
 							<th width="400px">Name</th>
+							<th width="100px">Size</th>
 						</tr>
 					</thead>
 					{/*中身*/}
-					<tbody>
-
-								
-								{
-								list_data.map((item,ind) => {
-									return(
-										<tr key={ind}>
-											<td>{ind}</td>
-											<td>{item.Key}</td>
-										</tr>
-									)
-								})
-								}
-							
-
-						
+					<tbody className="bucket_info_body">
+					{
+					list_data.map((item,ind) => {
+						return(
+							<tr key={ind}>
+								<td>{ind}</td>
+								<td>{item.Key}</td>
+								<td>{item.Size / 1048576}</td>
+							</tr>
+						)
+					})
+					}
 					</tbody>
 				</table>
 			</div>
