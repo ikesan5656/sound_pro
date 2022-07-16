@@ -11,6 +11,8 @@ import HeaderNav from './Components/Generic/Navigation/HeaderNav';
 import ViewAWS from './Pages/ViewAWS';
 import S3ManagerView from './Pages/S3ManagerView';
 import S3StorageView from './Pages/S3StorageView';
+import DawEditor from './Components/DawEditor/DawEditor';
+import DawEditorTest from './Components/DawEditor/EditorTest';
 
 function App() {
   return (
@@ -22,9 +24,9 @@ function App() {
 					{/*<Route exact path="/" element={<StepSequencer/>}/>
 					<Route path="/redux_test" element={<ReduxTestView/>}/>
 					<Route path="/aws_test" element={<ViewAWS/>}/>*/}
-					<Route exact path="/" element={<ViewAWS/>}/>
-					<Route exact path="/s3_manage" element={<S3ManagerView/>}/>
-					<Route exact path="/s3_storage" element={<S3StorageView/>}/>
+					<Route exact path="/" element={<DawEditorTest/>}/>
+					{/*<Route exact path="/s3_manage" element={<S3ManagerView/>}/>
+					<Route exact path="/s3_storage" element={<S3StorageView/>}/>*/}
 				</Routes>
 			</BrowserRouter>
 

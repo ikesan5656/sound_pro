@@ -1,11 +1,12 @@
 .transition_group{
 
-	width: 80%;
+	width: 200px;
 	height: 50px;
 	padding-left: 25px;
+	margin: 0;
+	align-items: center;
 	display: flex;
-	/*justify-content: center;*/ /*左右中央揃え*/
-	align-items: center;     /*上下中央揃え*/
+
 }
 
 .transition_group a:not(:first-child){

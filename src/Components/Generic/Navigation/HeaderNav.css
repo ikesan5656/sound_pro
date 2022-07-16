@@ -1,8 +1,11 @@
 /*ヘッダーのコンテナ*/
 .header_nav{
-	display: flex;
-	/*width: 100%;*/
+	width: 100%;
 	height: 50px;
 	background-color: aliceblue;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+     /*上下中央揃え*/
 }
 
