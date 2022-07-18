@@ -1,0 +1,18 @@
+#editorCanvasContainer{
+	background-color: red;
+  box-sizing: border-box;
+	flex-grow: 1;
+	margin: 0;
+	padding: 0px;
+
+	position: relative;
+	height: 0;
+	overflow: hidden;
+}
+
+/*#editorCanvas{
+	box-sizing: border-box;
+	flex-grow: 1;
+	margin: 0;
+	padding: 0px;
+}*/

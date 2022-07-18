@@ -1,12 +1,9 @@
 #dawEditorContainer{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-grow: 1;
 	margin: 0;
 	padding: 0px;
 	background-color: grey;
 }
 
-#editorCanvas {
-
-}

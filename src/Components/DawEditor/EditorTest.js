@@ -7,6 +7,8 @@ import useResize from "../../CustamHooks/useResize";
 import { useWindowSize } from "react-use";
 import { useDidUpdateEffect } from "../../CustamHooks/useDidUpdateEffect.js";
 import useCanvasResize from "../../CustamHooks/useCanvasResize";
+import EditorHeader from "./Parts/EditorHeader";
+import EditorCanvas from "./Parts/EditorCanvas";
 
 function DawEditorTest() {
 	useEffect(() => {}, []);
@@ -63,6 +65,8 @@ function DawEditorTest() {
   return (
 
     <div id="dawEditorContainer">
+			<EditorHeader/>
+			<EditorCanvas/>
 
 		</div>
   );

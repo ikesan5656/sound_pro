@@ -65,6 +65,7 @@ function DawEditor(){
 
 	return(
 		<div id="dawEditorContainer">
+			
 			{/*<p style={{margin: '0px'}}>test</p>*/}
 			<Stage
 				id="editorCanvas"

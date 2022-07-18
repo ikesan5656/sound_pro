@@ -1,0 +1,8 @@
+#userIconContainer{
+	align-items: center;
+	display: flex;
+	width: 50px;
+	height: 100%;
+	margin-left: auto;
+
+}
